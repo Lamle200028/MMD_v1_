@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/lin_home_1"
+    android:background="#CDE3F3">
+
+    <LinearLayout
+        android:id="@+id/lin_home"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/purple_700">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_back">
+
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_gravity="center">
+            </TextView>
+            <ImageView
+                android:id="@+id/notification_home"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/notification"
+                android:layout_gravity="right"
+                android:layout_marginRight="20dp">
+
+            </ImageView>
+
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="75dp">
+                    <ImageView
+                        android:id="@+id/image_user_home"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/ic_user"
+                        android:layout_marginBottom="5dp" >
+                    </ImageView>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:background="@drawable/bg_userhome">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wellcome"
+                    android:textSize="10dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black">
+                </TextView>
+                <TextView
+                    android:id="@+id/username_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="Le thanh lam">
+                </TextView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="25dp"
+            android:gravity="center"
+            android:background="@drawable/custom_layout_home">
+
+            <GridLayout
+                android:id="@+id/gridviewMainMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2">
+
+                <LinearLayout
+                    android:id="@+id/item_list_device"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/custom_divider_griditem"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/medical_device" />
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="@string/thietBi"
+                        android:textColor="#474140"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/item_User"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/custom_divider_griditem"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/employee" />
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="@string/nhanVien"
+                        android:textColor="#474140"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/itemScancode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/custom_divider_griditem"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_scan_code" />
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="@string/Qrcode"
+                        android:textColor="#474140"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/item_thong_bao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/custom_divider_griditem"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="37dp"
+                        android:src="@drawable/notification" />
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="@string/thongBao"
+                        android:textColor="#474140"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/item_thong_ke"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/custom_divider_griditem"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_list_patient" />
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="@string/thongKe"
+                        android:textColor="#474140"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/item_bao_hong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/custom_divider_griditem"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/mark" />
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="@string/baoHong"
+                        android:textColor="#474140"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </GridLayout>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
